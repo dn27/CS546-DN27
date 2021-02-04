@@ -3,6 +3,24 @@ const lab1 = require("./lab1");
 console.log(lab1.questionOne([1, 2, 3])); 
 // should return and output {'1': false, '2': true, '3': true}
 
+console.log(lab1.questionOne([5, 3, 10])); 
+//returns and outputs: {'5':true, '3': true, '10': false} 
+
+console.log(lab1.questionOne([2])); 
+// returns and outputs: {'2': true} 
+
+console.log(lab1.questionOne([5, 10, 9])); 
+//returns and outputs: {'5': true, '10': false, '9': false}
+
+console.log(lab1.questionOne([2, 7, 9, 1013])); 
+// returns and outputs: {'2': true, '7': true, '9': false, '1013': true}
+
+console.log(lab1.questionOne([])); 
+// returns and outputs: {}
+
+console.log(lab1.questionOne()); 
+// returns and outputs: {}
+
 console.log(lab1.questionTwo([1,2,3])); 
 // should return and output 733.36 
 

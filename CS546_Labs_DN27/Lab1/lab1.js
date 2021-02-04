@@ -9,7 +9,7 @@ const questionOne = function questionOne(arr) {
             return true;
         } else {
             for (var num = 2; num < value; num++) {
-                if (num % value === 0) {
+                if (value % num === 0) {
                     return false;
                 }
              }
@@ -17,6 +17,9 @@ const questionOne = function questionOne(arr) {
         }
     }
 
+    if (arr == undefined) {
+        return {};
+    }
     // Empty object that must be populated
     let primeObj = {};
 
