@@ -37,6 +37,19 @@ const questionOne = function questionOne(arr) {
 
 const questionTwo = function questionTwo(arr) { 
     // Implement question 2 here
+    if (arr == undefined) {
+        return 0;
+    }
+    let sumOfSquares = arr.reduce((currentTotal, newValue) => {
+        let squared = newValue * newValue;
+        const newTotal = currentTotal + squared;
+        return newTotal;
+      }, 0);
+    
+    let sumRaised = Math.pow(sumOfSquares, 5);
+    let sqRoot = Math.sqrt(sumRaised);
+    sqRoot = Math.round(sqRoot * 100) / 100
+    return sqRoot;
 }
 
 const questionThree = function questionThree(text) {
