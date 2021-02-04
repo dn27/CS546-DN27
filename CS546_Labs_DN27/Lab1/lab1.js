@@ -2,34 +2,32 @@ const questionOne = function questionOne(arr) {
     // Implement question 1 here
     // Function that returns true if a number is prime, false otherwise
     function primeCheck(value) {
-        if(value === 1) {
+        if (value === 1 || value <= 0) {
             return false;
         }
         else if (value === 2) {
             return true;
-        }
-        else {
-            for(var num = 2; num < value; num++) {
-                if (value % num === 0) {
+        } else {
+            for (var num = 2; num < value; num++) {
+                if (num % value === 0) {
                     return false;
                 }
-            }
-            return true;
+             }
+             return true;
         }
     }
-    // Returns array of true/falses
-    let arrayCheck = arr.map(primeCheck);
+
     // Empty object that must be populated
     let primeObj = {};
-    // Take each number in the array,
-    arr.forEach((number) => {
-        // And take each boolean corresponding to number
-        arrayCheck.forEach((bool) => {
-            // Add number as key and bool as value into primeObj object
-            primeObj[number] = bool;
-        });
-      });
 
+    // Goes through given array
+    arr.forEach((x) => {
+        // Check if prime or not
+        let isPrime = primeCheck(x);
+        // Adds key: x and value: is prime
+        primeObj[x] = isPrime;
+        
+    });
     return primeObj;
     
 }
