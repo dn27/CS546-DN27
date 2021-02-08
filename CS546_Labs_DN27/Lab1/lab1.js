@@ -54,6 +54,56 @@ const questionTwo = function questionTwo(arr) {
 
 const questionThree = function questionThree(text) {
     // Implement question 3 here
+    const strCount = {
+        consonants: 0,
+        vowels: 0,
+        numbers: 0,
+        spaces: 0,
+        punctuation: 0,
+        specialCharacters: 0
+    };
+    
+    
+    const onlyCons = /[bcdfghjklmnpqrstvwxyz]/gi;
+    const onlyVowel = /[aeiou]/gi;
+    const onlyNumbers = /\d/g;
+    const whiteSpace = /\s/g;
+    const onlyPunc = /[.,?!'":;_(){}\[\]-]/g;
+    const specialChar = /[#\$%\^&@]/g;
+
+    if (text === "" ) {
+        return strCount;
+    }
+
+    // If character is B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, W, X, Z, Y, 
+    // add to consonant counter
+    let consMatch = (text.match(onlyCons) || []);
+    let consCount = consMatch.length;
+    strCount.consonants = consCount;
+    // If character is A, E, I, O, U, add to vowel counter
+    let vowelMatch = (text.match(onlyVowel) || []);
+    let vowelCount = vowelMatch.length;
+    strCount.vowels = vowelCount;
+    // If character is a space, add to space counter
+    let spaceMatch = (text.match(whiteSpace) || []);
+    let spaceCount = spaceMatch.length;
+    strCount.spaces = spaceCount;
+    // If character is a number, add to number counter
+    let numMatch = (text.match(onlyNumbers) || []);
+    let numCount = numMatch.length;
+    strCount.numbers = numCount;
+    // If character is a . , ? ! ' " : ; - ... _ () {} []
+    let puncMatch = (text.match(onlyPunc) || []);
+    let puncCount = puncMatch.length;
+    strCount.punctuation = puncCount;
+    // If character is a **#  $  % & ^ @ %**, add to special character counter
+    let characterMatch = (text.match(specialChar) || []);
+    let charCount = characterMatch.length;
+    strCount.specialCharacters = charCount;
+
+
+
+    return strCount;
 }
 
 const questionFour = function questionFour(num1, num2,num3) {
