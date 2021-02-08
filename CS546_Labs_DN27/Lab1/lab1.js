@@ -106,8 +106,17 @@ const questionThree = function questionThree(text) {
     return strCount;
 }
 
-const questionFour = function questionFour(num1, num2,num3) {
+const questionFour = function questionFour(num1, num2, num3) {
     // Implement question 4 here
+    let loanAmt = num1;
+    // Convert interest percentage to decimal number by / by 100 and parseFloat
+    let interest = parseFloat(num2) / 100;
+    interest = interest / 12;
+    let term = num3 * 12;
+    let monthlyPayment = loanAmt * interest * Math.pow((1 + interest), term);
+    let mpDenom = Math.pow((1 + interest), term) - 1;
+    monthlyPayment = monthlyPayment / mpDenom;
+    return  Math.round(monthlyPayment * 100) / 100;
 }
 
 module.exports = {
