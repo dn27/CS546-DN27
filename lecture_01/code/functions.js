@@ -11,11 +11,11 @@ function printThisMessage(message) {
 }
 
 // Pass message as parameter
-printThisMessage('Hello, CS-546');
+printThisMessage("Hello, CS-546");
 
 // anon function that takes a paramter x and doubles it
-let doubleUpAnonymous = function (x) {
-  return x * 2;
+let doubleUpAnonymous = function (x, y) {
+  return x * y;
 };
 
 console.log(doubleUpAnonymous(5));
@@ -27,7 +27,7 @@ let doubleUp = (x) => {
 
 console.log(doubleUp(10));
 
-// A variable set to a anon function that takes a number 
+// A variable set to a anon function that takes a number
 // and returns another function that takes another number and adds that to original
 // then returns the added number
 let addToTheNumber = (num) => {
@@ -81,10 +81,10 @@ function demonstrateVarVersusLet() {
   // the number of even numbers from 0 to 12
 
   // Change this between "odd", "even", and "both";
-  const whatDoICount = 'both';
+  const whatDoICount = "both";
   const howManyToCount = 12;
 
-  if (whatDoICount === 'odd' || whatDoICount === 'both') {
+  if (whatDoICount === "odd" || whatDoICount === "both") {
     // CHANGE THIS BETWEEN `var` and `let` to see difference!
     let count;
     for (let i = 0; i < howManyToCount; i++) {
@@ -100,7 +100,7 @@ function demonstrateVarVersusLet() {
     }
   }
 
-  if (whatDoICount === 'even' || whatDoICount === 'both') {
+  if (whatDoICount === "even" || whatDoICount === "both") {
     // CHANGE THIS BETWEEN `var` and `let` to see difference!
     // VAR - same count variable | LET - different count variable
     var count;

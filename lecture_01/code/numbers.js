@@ -1,6 +1,6 @@
 // Two constants
-const x = 12;
-const y = 25;
+// const x = 12;
+// const y = 25;
 
 // Basic math
 let multiplied = x * y;
@@ -13,7 +13,7 @@ console.log(multiplied, divided, subtracted, added);
 
 // Raise x by y Using Math global pow
 let toThePowerOf = Math.pow(x, y);
-console.log(toThePowerOf);
+console.log(toThePowerOf(2));
 
 // Convert a number to a string
 let multipliedString = multiplied.toString();
@@ -23,5 +23,5 @@ console.log(multipliedString);
 console.log(multipliedString + 5);
 
 //console.log(multipliedString);
-multipliedString = 'H';
+multipliedString = "H";
 console.log(parseInt(multipliedString) + 5);
